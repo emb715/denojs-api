@@ -1,0 +1,11 @@
+{
+  "name": "tv-online",
+  "version": "1.0.0",
+  "main": "app/index.ts",
+  "license": "MIT",
+  "scripts": {
+    "dev": "deno task api:dev",
+    "start": "deno task api:dev"
+  },
+  "dependencies": {}
+}

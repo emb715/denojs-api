@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "lib": [
+      "deno.ns",
+      "dom",
+      "dom.iterable",
+      "dom.asynciterable"
+    ]
+  },
+  "importMap": "./import_map.json",
+  "imports": {
+    "std/": "https://deno.land/std@0.174.0/"
+  },
+  "tasks": {
+    "api:dev": "deno run --unstable --watch --allow-net --allow-read --allow-write  --allow-env  ./api/mod.ts",
+    "api:start": "deno run --unstable --allow-net --allow-read --allow-write  --allow-env  ./api/mod.ts"
+  },
+  "lint": {
+    "files": {
+      "include": ["api/"],
+      "exclude": ["app/"]
+    },
+    "rules": {
+      "tags": ["recommended"],
+      "include": ["ban-untagged-todo"],
+      "exclude": ["no-unused-vars"]
+    }
+  }
+}
