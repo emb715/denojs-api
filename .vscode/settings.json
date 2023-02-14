@@ -1,7 +1,6 @@
 {
   "deno.enablePaths": [
-    "./api",
-    "./scripts"
+    "./src"
   ],
   "deno.enable": true,
   "deno.lint": true,
