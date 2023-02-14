@@ -1,7 +1,7 @@
 {
-  "name": "tv-online",
+  "name": "denojs-api",
   "version": "1.0.0",
-  "main": "app/index.ts",
+  "main": "src/mod.ts",
   "license": "MIT",
   "scripts": {
     "dev": "deno task api:dev",
