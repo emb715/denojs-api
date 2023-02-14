@@ -5,7 +5,14 @@
   "license": "MIT",
   "scripts": {
     "dev": "deno task api:dev",
-    "start": "deno task api:dev"
+    "start": "deno task api:dev",
+    "prisma:push": "deno task prisma:push",
+    "prisma:generate": "deno task prisma:generate"
   },
-  "dependencies": {}
+  "devDependencies": {
+    "prisma": "^4.5.0"
+  },
+  "dependencies": {
+    "@prisma/client": "^4.5.0"
+  }
 }

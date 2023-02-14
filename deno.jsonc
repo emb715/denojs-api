@@ -9,15 +9,18 @@
   },
   "importMap": "./import_map.json",
   "imports": {
-    "std/": "https://deno.land/std@0.174.0/"
+    "std/": "https://deno.land/std@0.177.0/"
   },
   "tasks": {
     "api:dev": "deno run --unstable --watch --allow-net --allow-read --allow-write  --allow-env  ./src/mod.ts",
-    "api:start": "deno run --unstable --allow-net --allow-read --allow-write  --allow-env  ./src/mod.ts"
+    "api:start": "deno run --unstable --allow-net --allow-read --allow-write  --allow-env  ./src/mod.ts",
+    "prisma:push": "deno run --unstable -A npm:prisma@4.5 db push",
+    "prisma:generate": "deno run --unstable -A npm:prisma@4.5 generate --data-proxy"
   },
   "lint": {
     "files": {
-      "include": ["src/"]
+      "include": ["/**/*.ts"],
+      "exclude": ["node_modules/"]
     },
     "rules": {
       "tags": ["recommended"],
