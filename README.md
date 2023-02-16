@@ -78,3 +78,4 @@ To initiate this project run
 ### TODO:
 - Add Auth/Bearer token
 - Add prisma docs
+- Test coverage

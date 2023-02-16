@@ -13,6 +13,9 @@ import { ThingsRouter } from "./endpoints/things/things_router.ts";
 const app = new Application();
 const ApiRouter = new Router();
 
+ApiRouter.get<string>(`/`, (ctx: RouterContext<string>) => {
+  ctx.response.body = "Alive :)";
+});
 ApiRouter.get<string>(`${API_URL}`, (ctx: RouterContext<string>) => {
   ctx.response.body = {
     status: "success",
