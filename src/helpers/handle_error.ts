@@ -86,7 +86,6 @@ const handleError = (error: CustomError | Error, ctx: Context) => {
         ...__DEV__ && { ["__DEV__"]: error },
       },
     });
-  } finally {
     // Error Log Service
     errorLogger.captureException(error);
   }
