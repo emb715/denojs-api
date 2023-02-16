@@ -12,6 +12,20 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+// generator zod {
+//   provider         = "prisma-zod-generator-emb"
+//   output           = "./__generated__/"
+//   zodModule        = "https://deno.land/x/zod@v3.16.1/mod.ts"
+//   useExtensionName = "true"
+// }
+
+generator zod {
+  provider         = "prisma-zod-generator-denojs"
+  output           = "./__generated__/"
+  zodModule        = "https://deno.land/x/zod@v3.16.1/mod.ts"
+  useExtensionName = "ts"
+}
+
 model Thing {
   id          String @id @default(auto()) @map("_id") @db.ObjectId
   name        String @unique
@@ -19,4 +33,6 @@ model Thing {
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+
+  @@map("things")
 }

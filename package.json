@@ -10,9 +10,9 @@
     "prisma:generate": "deno task prisma:generate"
   },
   "devDependencies": {
-    "prisma": "^4.5.0"
+    "prisma": "4.5.0"
   },
   "dependencies": {
-    "@prisma/client": "^4.5.0"
+    "@prisma/client": "4.5.0"
   }
 }

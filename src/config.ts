@@ -1,6 +1,15 @@
 import "https://deno.land/std@0.177.0/dotenv/load.ts";
 
+const packageJson = JSON.parse(
+  new TextDecoder().decode(await Deno.readFile("./package.json")),
+);
+
+const NAME = packageJson.name as string;
+const VERSION = packageJson.version as string;
+
 const __DEV__ = Deno.env.get("NODE_ENV") !== "production" ?? false as boolean;
+
+const SENTRY_KEY = Deno.env.get("SENTRY_KEY") ?? "" as string;
 
 const DATABASE_URL = Deno.env.get("DATABASE_URL") ?? "" as string;
 
@@ -26,4 +35,7 @@ export {
   MONGO_DB_PASS,
   MONGO_DB_URL,
   MONGO_DB_USER,
+  NAME,
+  SENTRY_KEY,
+  VERSION,
 };
